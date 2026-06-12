@@ -4,5 +4,5 @@
   "editor.formatOnSave": true,
   "editor.mouseWheelZoom": true,
   "terminal.integrated.mouseWheelZoom": true,
-  "editor.fontSize": 16
+  "editor.fontSize": 20
 }
