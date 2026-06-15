@@ -124,7 +124,7 @@ const Story = () => {
                 className="story-cta-btn"
                 icon={<RiArrowRightLine />}
               >
-                Explore Our Resort
+                Read More
               </Button>
             </div>
           </div>

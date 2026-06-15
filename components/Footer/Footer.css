@@ -1,0 +1,224 @@
+/* ==========================================================================
+   FOOTER COMPONENT STYLES
+   ========================================================================== */
+.footer-section {
+  position: relative;
+  background-color: #080808; /* Extremely dark for footer distinction */
+  border-top: 1px solid rgba(212, 175, 55, 0.2); /* Subtle Gold Top Border */
+  padding-top: var(--space-3xl);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+/* ==========================================================================
+   TOP GRID LAYOUT
+   ========================================================================== */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.footer-title {
+  font-family: var(--font-cormorant), serif;
+  font-size: 1.4rem;
+  color: var(--color-light);
+  margin-bottom: var(--space-md);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.footer-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 40px;
+  background-color: #d4af37;
+}
+
+/* --- Brand Column --- */
+.brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer-logo {
+  display: block;
+}
+
+.footer-logo-img {
+  max-width: 180px;
+  filter: drop-shadow(0 0 10px rgba(0,0,0,0.5));
+}
+
+.footer-brand-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--color-light);
+  font-size: 1.2rem;
+  transition: var(--transition-base);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-socials a:hover {
+  background-color: #d4af37;
+  border-color: #d4af37;
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* --- Quick Links Columns --- */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links a::before {
+  content: '›';
+  position: absolute;
+  left: -15px;
+  color: #d4af37;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #d4af37;
+  transform: translateX(15px);
+}
+
+.footer-links a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* --- Contact Info Column --- */
+.contact-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.contact-icon {
+  color: #d4af37;
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+.footer-contact-item p,
+.footer-contact-item a {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+.footer-contact-item a:hover {
+  color: #d4af37;
+}
+
+/* ==========================================================================
+   BOTTOM FOOTER & COPYRIGHT
+   ========================================================================== */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: var(--space-md) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+  color: var(--color-light);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM
+   ========================================================================== */
+
+/* === TABLETS (min-width: 768px) === */
+@media (min-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* === DESKTOPS (min-width: 1024px) === */
+@media (min-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: var(--space-3xl);
+  }
+
+  .brand-col {
+    padding-right: var(--space-xl);
+  }
+}

@@ -7,6 +7,7 @@ import { RiSunLine } from "react-icons/ri";
 import "./Navbar.css";
 import Hamburger from "../Hamburger";
 import Button from "../Button";
+import { BOOK_NOW_URL } from "@/constants";
 
 export default function Navbar({ onMenuOpen }) {
   const [isNavbarScrolled, setIsNavbarScrolled] = useState(false);
@@ -56,17 +57,19 @@ export default function Navbar({ onMenuOpen }) {
         <Image
           src="/assets/images/resort-logo.png"
           alt="Corbett Treat Resort Logo"
-          width={120}
-          height={80}
+          width={400}
+          height={150}
           priority
-          style={{ width: "auto" }}
+          style={{ width: "auto", height: "auto" }}
           className="logo-img"
         />
       </Link>
 
       <div className="nav-right">
         <Button
-          href="#book"
+          href={BOOK_NOW_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           variant="primary"
           size="small"
           className="nav-book-btn"

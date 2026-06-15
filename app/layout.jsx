@@ -1,4 +1,4 @@
-import { Cormorant_Garamond, Poppins } from "next/font/google";
+import { Cormorant_Garamond, Poppins, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -13,6 +13,12 @@ const poppins = Poppins({
   weight: ["300", "400", "500", "600"],
 });
 
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+});
+
 export const metadata = {
   title: "Corbett Treat Resort",
   description:
@@ -21,8 +27,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${poppins.variable}`}>
-      <body>{children}</body>
+    <html lang="en" className={`${cormorant.variable} ${poppins.variable} ${playfair.variable}`}>
+      <body  cz-shortcut-listen="true">{children}</body>
     </html>
   );
 }

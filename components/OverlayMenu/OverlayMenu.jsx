@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { RiArrowRightLine } from "react-icons/ri";
 import Button from "../Button";
-import { NAV_LINKS, CONTACT_PHONES, RESORT_ADDRESS } from "@/constants";
+import { NAV_LINKS, CONTACT_PHONES, RESORT_ADDRESS, CONTACT_EMAIL, BOOK_NOW_URL } from "@/constants";
 import "./OverlayMenu.css";
 
 /**
@@ -75,9 +75,9 @@ export default function OverlayMenu({ isOpen, onClose }) {
           <Image
             src="/assets/images/resort-logo.png"
             alt="Corbett Treat Resort Logo"
-            width={120}
-            height={80}
-            style={{ width: "auto" }}
+            width={400}
+            height={150}
+            style={{ width: "auto", height: "auto" }}
             className="overlay-logo-img"
           />
         </Link>
@@ -132,8 +132,17 @@ export default function OverlayMenu({ isOpen, onClose }) {
             </p>
           </div>
 
+          <div className="overlay-info-block">
+            <h4>Email Us</h4>
+            <p>
+              <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+            </p>
+          </div>
+
           <Button
-            href="#book"
+            href={BOOK_NOW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
             variant="primary"
             className="overlay-cta"
             onClick={onClose}

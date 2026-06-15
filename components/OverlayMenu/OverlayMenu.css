@@ -105,7 +105,7 @@
 }
 
 .overlay-logo-img {
-  height: 56px;
+  height: 56px !important;
   width: auto !important;
   filter: brightness(0) invert(1);
 }
@@ -346,7 +346,7 @@
   }
 
   .overlay-logo-img {
-    height: 80px;
+    height: 80px !important;
     width: auto !important;
   }
 

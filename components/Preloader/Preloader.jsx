@@ -21,10 +21,10 @@ export default function Preloader({ active }) {
       <Image
         src="/assets/images/resort-logo.png"
         alt="Corbett Treat Resort"
-        width={120}
-        height={56}
+        width={400}
+        height={150}
         priority
-        style={{ width: "auto" }}
+        style={{ width: "auto", height: "auto" }}
         className="preloader-logo"
       />
       <div className="loader-line" aria-hidden="true" />

@@ -1,0 +1,303 @@
+/* ==========================================================================
+   EVENTS SECTION COMPONENT STYLES
+   ========================================================================== */
+.events-section {
+  position: relative;
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-dark);
+  overflow: hidden;
+}
+
+/* Background Subtle Decorative Accent */
+.events-decor-bg {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 77, 46, 0.15) 0%,
+    transparent 70%
+  );
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.events-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  position: relative;
+  z-index: 2;
+}
+
+.events-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+/* ==========================================================================
+   MEDIA / VIDEO CONTAINER
+   ========================================================================== */
+.events-media-col {
+  width: 100%;
+}
+
+.events-video-frame {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--color-dark-alt);
+  aspect-ratio: 16/9;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s ease;
+}
+
+.events-video-frame:hover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 25px 55px rgba(0, 77, 46, 0.25);
+  border-color: rgba(0, 77, 46, 0.3);
+}
+
+.events-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Glassmorphism Video Floating Badge */
+.events-video-badge {
+  position: absolute;
+  bottom: var(--space-sm);
+  left: var(--space-sm);
+  background: rgba(26, 26, 26, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 3;
+  pointer-events: none;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.badge-icon {
+  color: #d4af37; /* Gold Accent */
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.badge-text {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+/* ==========================================================================
+   CONTENT SIDE
+   ========================================================================== */
+.events-content-col {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.section-label {
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-label);
+  color: #d4af37; /* Gold theme font */
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xs);
+}
+
+.events-heading {
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--color-light);
+  margin-bottom: var(--space-xs);
+}
+
+/* Divider styling */
+.events-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: var(--space-xs) 0 var(--space-md);
+}
+
+.divider-line {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    rgba(212, 175, 55, 0.5),
+    transparent
+  );
+  width: 60px;
+}
+
+.events-divider .divider-line:last-child {
+  background: linear-gradient(
+    to left,
+    rgba(212, 175, 55, 0.5),
+    transparent
+  );
+}
+
+.divider-icon {
+  color: #d4af37;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.events-intro {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+  font-weight: 400;
+}
+
+.events-desc {
+  font-size: var(--font-size-body-reg);
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+  margin-bottom: var(--space-lg);
+}
+
+/* Highlight Items */
+.events-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.highlight-item {
+  display: flex;
+  gap: var(--space-sm);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: var(--space-sm);
+  transition: var(--transition-base);
+}
+
+.highlight-item:hover {
+  background: rgba(0, 77, 46, 0.08);
+  border-color: rgba(0, 77, 46, 0.2);
+  transform: translateX(5px);
+}
+
+.highlight-icon {
+  background: rgba(0, 77, 46, 0.2);
+  border: 1px solid rgba(0, 77, 46, 0.3);
+  color: #d4af37;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.highlight-item h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-light);
+  margin-bottom: 2px;
+}
+
+.highlight-item p {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.4;
+}
+
+.events-action {
+  display: flex;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES (AGENTS.md Rule 1)
+   ========================================================================== */
+
+/* === TABLETS (min-width: 768px) === */
+@media (min-width: 768px) {
+  .events-section {
+    padding: var(--space-3xl) 0;
+  }
+
+  .events-wrapper {
+    gap: var(--space-2xl);
+  }
+
+  .events-highlights {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .highlight-item {
+    flex: 1 1 calc(50% - var(--space-sm));
+  }
+}
+
+/* === DESKTOPS (min-width: 1024px) === */
+@media (min-width: 1024px) {
+  .events-wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2xl);
+  }
+
+  .events-media-col {
+    flex: 1.1;
+    max-width: 55%;
+  }
+
+  .events-content-col {
+    flex: 0.9;
+    max-width: 45%;
+    padding-left: var(--space-sm);
+  }
+
+  .events-video-frame {
+    aspect-ratio: 4/3;
+  }
+
+  .events-highlights {
+    flex-direction: column;
+  }
+
+  .highlight-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* === LARGE DESKTOPS (min-width: 1440px) === */
+@media (min-width: 1440px) {
+  .events-container {
+    max-width: 1320px;
+  }
+  
+  .events-wrapper {
+    gap: var(--space-3xl);
+  }
+}

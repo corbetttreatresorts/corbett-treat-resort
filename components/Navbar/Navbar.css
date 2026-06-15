@@ -52,8 +52,8 @@
 }
 
 .logo-img {
-  height: 40px;
-  width: auto;
+  height: 40px !important;
+  width: auto !important;
   filter: brightness(0) invert(1);
   transition:
     filter 0.4s ease,
@@ -61,7 +61,7 @@
 }
 
 .navbar.scrolled .logo-img {
-  height: 40px;
+  height: 40px !important;
   filter: brightness(0);
 }
 
@@ -87,11 +87,11 @@
 /* === NORMAL & LARGE PHONES (min-width: 375px) === */
 @media (min-width: 375px) {
   .logo-img {
-    height: 44px;
+    height: 44px !important;
   }
 
   .navbar.scrolled .logo-img {
-    height: 36px;
+    height: 36px !important;
   }
 }
 
@@ -106,11 +106,11 @@
   }
 
   .logo-img {
-    height: 60px;
+    height: 60px !important;
   }
 
   .navbar.scrolled .logo-img {
-    height: 42px;
+    height: 42px !important;
   }
 }
 
@@ -139,11 +139,11 @@
   }
 
   .logo-img {
-    height: 80px;
+    height: 80px !important;
   }
 
   .navbar.scrolled .logo-img {
-    height: 48px;
+    height: 48px !important;
   }
 
   .nav-right {

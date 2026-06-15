@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Allow dev server access from 127.0.0.1
+  allowedDevOrigins: ["127.0.0.1", "localhost"],
+
   // Image optimization configuration
   images: {
     // Modern formats — automatically serve WebP/AVIF instead of JPEG/PNG

@@ -94,8 +94,8 @@ html.menu-open body {
    TYPOGRAPHY INHERITANCE / SYSTEM (Base for Mobiles < 375px)
    ========================================================================== */
 h1,
-.sans-title {
-  font-family: var(--font-cormorant), "Cormorant Garamond", serif;
+.hero-title {
+  font-family: var(--font-playfair), "Playfair Display", serif;
 }
 
 h1,

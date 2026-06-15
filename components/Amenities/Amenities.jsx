@@ -2,7 +2,7 @@ import "./Amenities.css";
 import Image from "next/image";
 import { RiPlantLine, RiArrowRightLine, RiMusic2Line } from "react-icons/ri";
 import { FaUmbrellaBeach, FaFire, FaChild } from "react-icons/fa";
-import { AMENITIES } from "@/constants";
+import { AMENITIES, BOOK_NOW_URL } from "@/constants";
 
 /**
  * Icon resolver — data array mein JSX avoid karo, yahan resolve karo
@@ -53,7 +53,7 @@ const Amenities = () => {
 
         {/* Grid Section */}
         <div className="amenities-grid">
-          {AMENITIES.map((amenity) => (
+          {AMENITIES.map((amenity, index) => (
             <div className="amenity-card" key={amenity.id}>
               {/* Image Container */}
               <div className="amenity-image-wrapper">
@@ -63,6 +63,7 @@ const Amenities = () => {
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="amenity-image"
+                  priority={index === 0}
                 />
                 <div className="amenity-overlay" />
 
@@ -76,10 +77,15 @@ const Amenities = () => {
               <div className="amenity-content">
                 <h3 className="amenity-card-title">{amenity.title}</h3>
                 <p className="amenity-card-desc">{amenity.description}</p>
-                <a href="#book" className="amenity-learn-more">
+                {/* <a
+                  href={BOOK_NOW_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="amenity-learn-more"
+                >
                   <span>LEARN MORE</span>
                   <RiArrowRightLine className="arrow-icon" />
-                </a>
+                </a> */}
               </div>
             </div>
           ))}

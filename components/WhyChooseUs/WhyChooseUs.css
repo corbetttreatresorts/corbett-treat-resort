@@ -1,0 +1,197 @@
+/* ==========================================================================
+   WHY CHOOSE US COMPONENT STYLES
+   ========================================================================== */
+.why-choose-us-section {
+  position: relative;
+  padding: var(--space-2xl) 0;
+  background-color: var(--color-dark-alt); /* Slightly contrasting dark bg */
+  border-top: 1px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.wcu-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+/* ==========================================================================
+   TOP SECTION: CONTENT & IMAGE GRID
+   ========================================================================== */
+.wcu-top-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+/* Left Content */
+.wcu-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.wcu-header {
+  margin-bottom: var(--space-md);
+}
+
+.wcu-subtitle {
+  display: block;
+  font-size: var(--font-size-small);
+  letter-spacing: var(--letter-spacing-label);
+  color: #d4af37; /* Luxury Gold Accent */
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.wcu-divider-line {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background-color: var(--color-light);
+  opacity: 0.3;
+}
+
+.wcu-heading {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 1.15;
+  color: var(--color-light);
+  margin-bottom: var(--space-md);
+  font-weight: 500;
+}
+
+.wcu-description {
+  font-size: var(--font-size-body-reg);
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+/* Right Image */
+.wcu-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.wcu-image {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.wcu-image-wrapper:hover .wcu-image {
+  transform: scale(1.05);
+}
+
+/* Decorative Accents on Image */
+.wcu-corner-accent {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d4af37; /* Gold */
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.8;
+  transition: all 0.5s ease;
+}
+
+.wcu-image-wrapper:hover .wcu-corner-accent {
+  width: 50px;
+  height: 50px;
+}
+
+.wcu-corner-accent.top-left {
+  top: 15px;
+  left: 15px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.wcu-corner-accent.bottom-right {
+  bottom: 15px;
+  right: 15px;
+  border-left: none;
+  border-top: none;
+}
+
+/* ==========================================================================
+   BOTTOM SECTION: STATS GRID
+   ========================================================================== */
+.wcu-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl) var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--space-xl);
+}
+
+.wcu-stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+}
+
+.stat-value {
+  font-family: var(--font-cormorant), serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  color: var(--color-light);
+  line-height: 1;
+  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.wcu-stat-item:hover .stat-value {
+  color: #d4af37;
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES
+   ========================================================================== */
+
+/* === TABLETS (min-width: 768px) === */
+@media (min-width: 768px) {
+  .why-choose-us-section {
+    padding: var(--space-3xl) 0;
+  }
+  
+  .wcu-stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* === DESKTOPS (min-width: 1024px) === */
+@media (min-width: 1024px) {
+  .wcu-container {
+    gap: var(--space-3xl);
+  }
+
+  .wcu-top-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .wcu-content {
+    padding-right: var(--space-xl);
+  }
+}
+
+/* === LARGE DESKTOPS (min-width: 1440px) === */
+@media (min-width: 1440px) {
+  .wcu-container {
+    max-width: 1320px;
+  }
+}

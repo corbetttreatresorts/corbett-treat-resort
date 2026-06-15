@@ -1,0 +1,78 @@
+/* =============================================================================
+   GALLERY PAGE SPECIFIC STYLING
+   ============================================================================= */
+
+.gallery-page-main {
+  padding-top: 100px; /* Leave space for fixed Navbar */
+  background-color: #0b0b0b;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Gallery Hero Header Section */
+.gallery-hero-header {
+  padding: 4rem 1.5rem 2rem;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(circle at top, rgba(197, 168, 128, 0.08) 0%, transparent 70%);
+}
+
+.gallery-hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery-hero-subtitle {
+  font-family: var(--font-secondary, inherit);
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: var(--color-primary, #c5a880);
+  display: block;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.gallery-hero-title {
+  font-family: var(--font-primary, inherit);
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.25rem;
+  letter-spacing: 1px;
+  background: linear-gradient(to right, #ffffff 30%, #e0e0e0 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gallery-hero-desc {
+  font-size: 1rem;
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gallery-grid-section {
+  padding-bottom: 6rem;
+}
+
+/* =============================================================================
+   MEDIA QUERIES
+   ============================================================================= */
+
+@media (min-width: 768px) {
+  .gallery-page-main {
+    padding-top: 120px;
+  }
+  
+  .gallery-hero-header {
+    padding: 6rem 2rem 3rem;
+  }
+  
+  .gallery-hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .gallery-hero-desc {
+    font-size: 1.15rem;
+  }
+}

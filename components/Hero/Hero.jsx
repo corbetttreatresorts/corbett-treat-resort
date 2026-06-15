@@ -1,5 +1,6 @@
 import "./Hero.css";
 import Button from "../Button";
+import { BOOK_NOW_URL } from "@/constants";
 
 /**
  * Hero Section — Full-screen video background with CTA
@@ -30,7 +31,7 @@ export default function Hero() {
       <div className="hero-bottom-content">
         <div className="main-text">
           <span className="hero-eyebrow">LUXURY IN THE WILD</span>
-          <h1 className="sans-title">
+          <h1 className="hero-title">
             Wake Up To The Wild.
             <br />
             Stay Wrapped In Luxury.
@@ -41,7 +42,13 @@ export default function Hero() {
           </p>
         </div>
         <div className="hero-action">
-          <Button href="#book" variant="primary" className="story-cta-btn">
+          <Button
+            href={BOOK_NOW_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            variant="primary"
+            className="story-cta-btn"
+          >
             Book Now
           </Button>
         </div>
