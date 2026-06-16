@@ -7,21 +7,15 @@ import {
   RiArrowRightLine,
 } from "react-icons/ri";
 import { BsBinoculars } from "react-icons/bs";
-import Button from "../Button";
+import Button from "../../Button";
 
-/**
- * Our Story Section — Static content, Server Component
- *
- * Kya: "use client" hataya — koi state/effect nahi tha.
- * Kyun: Server Component ke roop mein render hoga, bundle size kam hoga.
- * Fix: story-main-image se `priority` hataya — yeh above-fold nahi hai.
- */
+
 const Story = () => {
   return (
     <section className="our-story-section" id="our-story">
       <div className="story-container">
         <div className="our-story-wrapper">
-          {/* Gallery Side */}
+          
           <div className="story-gallery">
             <div className="story-main-image">
               <Image
@@ -34,7 +28,7 @@ const Story = () => {
               />
             </div>
 
-            {/* Nature Card Badge */}
+            
             <div className="nature-card">
               <span className="nature-card-icon">
                 <RiPlantLine />
@@ -45,7 +39,7 @@ const Story = () => {
               </div>
             </div>
 
-            {/* Floating Overlap Image */}
+            
             <div className="story-floating-image">
               <Image
                 src="/assets/images/cottage-exterior-1.jpeg"
@@ -57,7 +51,7 @@ const Story = () => {
             </div>
           </div>
 
-          {/* Content Side */}
+          
           <div className="story-content">
             <span className="section-label">OUR STORY</span>
 
@@ -65,7 +59,7 @@ const Story = () => {
               A Hidden Retreat Beside Jim Corbett National Park
             </h2>
 
-            {/* Decorative Divider with Leaf Icon */}
+            
             <div className="story-divider">
               <span className="divider-line" />
               <span className="divider-icon">
@@ -88,7 +82,7 @@ const Story = () => {
               </p>
             </div>
 
-            {/* Feature Cards */}
+            
             <div className="story-features">
               <div className="feature-card">
                 <span className="feature-icon">
@@ -115,7 +109,7 @@ const Story = () => {
               </div>
             </div>
 
-            {/* CTA Button */}
+            
             <div className="story-action">
               <Button
                 href="#explore"

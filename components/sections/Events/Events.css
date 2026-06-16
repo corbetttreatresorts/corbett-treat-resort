@@ -1,6 +1,4 @@
-/* ==========================================================================
-   EVENTS SECTION COMPONENT STYLES
-   ========================================================================== */
+
 .events-section {
   position: relative;
   padding: var(--space-2xl) 0;
@@ -8,7 +6,7 @@
   overflow: hidden;
 }
 
-/* Background Subtle Decorative Accent */
+
 .events-decor-bg {
   position: absolute;
   top: -20%;
@@ -40,9 +38,7 @@
   align-items: center;
 }
 
-/* ==========================================================================
-   MEDIA / VIDEO CONTAINER
-   ========================================================================== */
+
 .events-media-col {
   width: 100%;
 }
@@ -71,7 +67,7 @@
   display: block;
 }
 
-/* Glassmorphism Video Floating Badge */
+
 .events-video-badge {
   position: absolute;
   bottom: var(--space-sm);
@@ -91,7 +87,7 @@
 }
 
 .badge-icon {
-  color: #d4af37; /* Gold Accent */
+  color: #d4af37; 
   display: flex;
   align-items: center;
   font-size: 1.1rem;
@@ -105,9 +101,7 @@
   color: var(--color-light);
 }
 
-/* ==========================================================================
-   CONTENT SIDE
-   ========================================================================== */
+
 .events-content-col {
   width: 100%;
   display: flex;
@@ -117,7 +111,7 @@
 .section-label {
   font-size: var(--font-size-small);
   letter-spacing: var(--letter-spacing-label);
-  color: #d4af37; /* Gold theme font */
+  color: #d4af37; 
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: var(--space-xs);
@@ -131,7 +125,7 @@
   margin-bottom: var(--space-xs);
 }
 
-/* Divider styling */
+
 .events-divider {
   display: flex;
   align-items: center;
@@ -179,7 +173,7 @@
   margin-bottom: var(--space-lg);
 }
 
-/* Highlight Items */
+
 .events-highlights {
   display: flex;
   flex-direction: column;
@@ -234,11 +228,9 @@
   display: flex;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES (AGENTS.md Rule 1)
-   ========================================================================== */
 
-/* === TABLETS (min-width: 768px) === */
+
+
 @media (min-width: 768px) {
   .events-section {
     padding: var(--space-3xl) 0;
@@ -259,7 +251,7 @@
   }
 }
 
-/* === DESKTOPS (min-width: 1024px) === */
+
 @media (min-width: 1024px) {
   .events-wrapper {
     flex-direction: row;
@@ -291,7 +283,7 @@
   }
 }
 
-/* === LARGE DESKTOPS (min-width: 1440px) === */
+
 @media (min-width: 1440px) {
   .events-container {
     max-width: 1320px;

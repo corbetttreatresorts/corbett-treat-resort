@@ -1,19 +1,12 @@
 import "./Button.css";
 
-/**
- * Reusable Button Component
- *
- * Kya: Ek flexible button jo `<a>` ya `<button>` dono ban sakta hai.
- * Kyun: Poore app mein consistent button styling ensure karne ke liye.
- * Variants: primary, gold, outline
- * Sizes: small, medium, large
- */
+
 const Button = ({
   children,
   href,
   onClick,
-  variant = "primary", // primary | gold | outline
-  size = "medium",     // small | medium | large
+  variant = "primary",
+  size = "medium",
   icon,
   className = "",
   type = "button",

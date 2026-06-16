@@ -1,11 +1,7 @@
-/* ==========================================================================
-   OUR STORY SECTION - PREMIUM LUXURY RESORT DESIGN
-   Matches reference: 2-column layout, decorative divider, 
-   overlapping gallery, minimal feature cards
-   ========================================================================== */
+
 
 .our-story-section {
-  padding: 1.5rem 0.5rem; /* Extremely compact mobile */
+  padding: 1.5rem 0.5rem; 
   background: #faf8f5;
   overflow: hidden;
 }
@@ -13,27 +9,25 @@
 .story-container {
   width: min(100%, 78rem);
   margin-inline: auto;
-  padding: 0 0.25rem; /* Reduced padding */
+  padding: 0 0.25rem; 
 }
 
 .our-story-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Reduced gap */
+  gap: 1rem; 
 }
 
-/* ==========================================================================
-   GALLERY / IMAGES LAYOUT (Mobile First)
-   ========================================================================== */
+
 .story-gallery {
   position: relative;
-  padding-bottom: 2rem; /* Reduced padding-bottom */
+  padding-bottom: 2rem; 
 }
 
 .story-main-image {
   position: relative;
   width: 95%;
-  aspect-ratio: 16 / 9; /* Compact height */
+  aspect-ratio: 16 / 9; 
   overflow: hidden;
   border-radius: 4px;
 }
@@ -47,7 +41,7 @@
   transform: scale(1.03);
 }
 
-/* --- Nature Card Badge (Bottom-Left Overlay) --- */
+
 .nature-card {
   position: absolute;
   left: 0;
@@ -88,7 +82,7 @@
   line-height: 1.2;
 }
 
-/* --- Floating Overlap Image (Bottom-Right) --- */
+
 .story-floating-image {
   position: absolute;
   right: 0;
@@ -112,15 +106,13 @@
   transform: translateY(-4px);
 }
 
-/* ==========================================================================
-   CONTENT / TEXT SIDE
-   ========================================================================== */
+
 .story-content {
   display: flex;
   flex-direction: column;
 }
 
-/* --- Section Label --- */
+
 .section-label {
   color: #c58a2a;
   font-size: 0.65rem;
@@ -130,7 +122,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* --- Heading --- */
+
 .story-heading {
   font-size: clamp(1.25rem, 4.5vw, 1.75rem);
   line-height: 1.15;
@@ -140,7 +132,7 @@
   font-family: var(--font-cormorant), "Cormorant Garamond", serif;
 }
 
-/* --- Decorative Divider with Leaf Icon --- */
+
 .story-divider {
   display: flex;
   align-items: center;
@@ -165,7 +157,7 @@
   font-size: 1rem;
 }
 
-/* --- Description Text --- */
+
 .story-description p {
   color: #5a6358;
   line-height: 1.4;
@@ -270,11 +262,9 @@
   transform: translateX(4px);
 }
 
-/* ==========================================================================
-   RESPONSIVE MEDIA QUERIES
-   ========================================================================== */
 
-/* === TABLETS (min-width: 768px) === */
+
+
 @media (min-width: 768px) {
   .our-story-section {
     padding: clamp(3rem, 8vw, 7rem) 1rem;
@@ -404,7 +394,7 @@
   }
 }
 
-/* === DESKTOPS (min-width: 1024px) === */
+
 @media (min-width: 1024px) {
   .our-story-wrapper {
     display: grid;
@@ -441,7 +431,7 @@
   }
 }
 
-/* === LARGE DESKTOPS (min-width: 1280px) === */
+
 @media (min-width: 1280px) {
   .our-story-wrapper {
     gap: 6.5rem;

@@ -1,15 +1,10 @@
-/* =============================================================================
-   GALLERY PAGE SPECIFIC STYLING
-   ============================================================================= */
-
 .gallery-page-main {
-  padding-top: 100px; /* Leave space for fixed Navbar */
+  padding-top: 100px;
   background-color: #0b0b0b;
   color: #ffffff;
   min-height: 100vh;
 }
 
-/* Gallery Hero Header Section */
 .gallery-hero-header {
   padding: 4rem 1.5rem 2rem;
   text-align: center;
@@ -54,10 +49,6 @@
 .gallery-grid-section {
   padding-bottom: 6rem;
 }
-
-/* =============================================================================
-   MEDIA QUERIES
-   ============================================================================= */
 
 @media (min-width: 768px) {
   .gallery-page-main {

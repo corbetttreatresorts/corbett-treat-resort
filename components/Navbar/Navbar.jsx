@@ -13,7 +13,7 @@ export default function Navbar({ onMenuOpen }) {
   const [isNavbarScrolled, setIsNavbarScrolled] = useState(false);
   const [weatherText, setWeatherText] = useState("Loading...");
 
-  // Weather API fetch — Jim Corbett coordinates
+
   useEffect(() => {
     const fetchWeather = async () => {
       try {
@@ -26,14 +26,14 @@ export default function Navbar({ onMenuOpen }) {
           setWeatherText(`${temp}°C`);
         }
       } catch {
-        // Fallback to local average if API fails
+
         setWeatherText("28°C");
       }
     };
     fetchWeather();
   }, []);
 
-  // Navbar scroll listener — changes appearance after a slight scroll
+
   useEffect(() => {
     const handleScroll = () => {
       setIsNavbarScrolled(window.scrollY > 50);
@@ -52,7 +52,7 @@ export default function Navbar({ onMenuOpen }) {
         </div>
       </div>
 
-      {/* Logo — Link to homepage for correct scroll-to-top + SEO */}
+      
       <Link href="/" className="logo" aria-label="Corbett Treat Resort — Home">
         <Image
           src="/assets/images/resort-logo.png"

@@ -8,24 +8,13 @@ import Button from "../Button";
 import { NAV_LINKS, CONTACT_PHONES, RESORT_ADDRESS, CONTACT_EMAIL, BOOK_NOW_URL } from "@/constants";
 import "./OverlayMenu.css";
 
-/**
- * OverlayMenu — Full-screen navigation overlay
- *
- * Kya: Kai accessibility aur performance fixes kiye:
- *   1. `<img>` → next/image
- *   2. `.overlay-close` div → `<button>` semantic fix
- *   3. `aria-modal`, `role="dialog"` add kiya
- *   4. Escape key se close support add kiya
- *   5. NAV_LINKS constants se render — hardcoding khatam
- *   6. CONTACT_PHONES constants se phone numbers render
- * Benefit: Screen reader users, keyboard-only users ke liye proper navigation.
- */
+
 export default function OverlayMenu({ isOpen, onClose }) {
   const [menuScrolled, setMenuScrolled] = useState(false);
   const overlayNavRef = useRef(null);
   const overlayMenuRef = useRef(null);
 
-  // Sync menu-open body scroll lock
+
   useEffect(() => {
     if (isOpen) {
       document.documentElement.classList.add("menu-open");
@@ -37,7 +26,7 @@ export default function OverlayMenu({ isOpen, onClose }) {
     };
   }, [isOpen]);
 
-  // Escape key to close overlay — keyboard accessibility
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === "Escape" && isOpen) {
@@ -48,7 +37,7 @@ export default function OverlayMenu({ isOpen, onClose }) {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen, onClose]);
 
-  // Hide scroll indicator when user scrolls
+
   const handleMenuScroll = () => {
     const menuScroll = overlayMenuRef.current?.scrollTop ?? 0;
     const navScroll = overlayNavRef.current?.scrollTop ?? 0;
@@ -82,7 +71,7 @@ export default function OverlayMenu({ isOpen, onClose }) {
           />
         </Link>
 
-        {/* Accessible close button */}
+        
         <button
           type="button"
           className="overlay-close"
@@ -153,7 +142,7 @@ export default function OverlayMenu({ isOpen, onClose }) {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
+      
       <div
         className={`overlay-scroll-indicator ${menuScrolled ? "fade-out" : ""}`}
         id="overlay-scroll-indicator"

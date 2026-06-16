@@ -10,11 +10,9 @@ export const metadata = {
 export default function GalleryPage() {
   return (
     <>
-      {/* Client-side shell: Preloader + Navbar + OverlayMenu + FloatingContact */}
       <ClientShell />
 
       <main className="gallery-page-main">
-        {/* Gallery Hero Header */}
         <section className="gallery-hero-header">
           <div className="gallery-hero-container">
             <span className="gallery-hero-subtitle">VISUAL JOURNEY</span>
@@ -25,13 +23,11 @@ export default function GalleryPage() {
           </div>
         </section>
 
-        {/* Gallery Grid and Lightbox */}
         <section className="gallery-grid-section">
           <GalleryGrid />
         </section>
       </main>
 
-      {/* Site Footer */}
       <Footer />
     </>
   );

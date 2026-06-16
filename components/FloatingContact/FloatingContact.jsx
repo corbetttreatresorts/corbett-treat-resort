@@ -5,24 +5,16 @@ import { RiWhatsappLine, RiPhoneLine } from "react-icons/ri";
 import { CONTACT_PHONES, WHATSAPP } from "@/constants";
 import "./FloatingContact.css";
 
-/**
- * FloatingContact — Fixed Call & WhatsApp buttons
- *
- * Kya: Hardcoded phone numbers → constants se import kiye.
- * Kyun: Ek jagah update karo, poore app mein reflect hoga.
- * Benefit: DRY principle, maintainability.
- *
- * Hero section mein yeh buttons hidden rehte hain (scroll > 300px par show hote hain).
- */
+
 const FloatingContact = () => {
   const [showCallDropdown, setShowCallDropdown] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const dropdownRef = useRef(null);
 
-  // WhatsApp URL with preset message
+
   const whatsappUrl = `https://wa.me/${WHATSAPP.number}?text=${encodeURIComponent(WHATSAPP.presetMessage)}`;
 
-  // Close dropdown on outside click
+
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -34,7 +26,7 @@ const FloatingContact = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Show/hide based on scroll position (hidden in Hero section)
+
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 300;
@@ -51,7 +43,7 @@ const FloatingContact = () => {
       className={`floating-contact-container ${isScrolled ? "visible" : ""}`}
       ref={dropdownRef}
     >
-      {/* Call Dropdown Menu */}
+      
       {showCallDropdown && (
         <div className="call-dropdown-menu" role="menu">
           {CONTACT_PHONES.map((phone) => (
@@ -69,7 +61,7 @@ const FloatingContact = () => {
         </div>
       )}
 
-      {/* Call Toggle Button */}
+      
       <button
         onClick={() => setShowCallDropdown(!showCallDropdown)}
         className={`floating-btn floating-call-btn ${showCallDropdown ? "active" : ""}`}
@@ -81,7 +73,7 @@ const FloatingContact = () => {
         <RiPhoneLine aria-hidden="true" />
       </button>
 
-      {/* WhatsApp Button */}
+      
       <a
         href={whatsappUrl}
         target="_blank"

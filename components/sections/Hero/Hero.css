@@ -3,7 +3,7 @@
   top: 0;
   height: 100vh;
   height: 100svh;
-  min-height: 400px; /* Base for small screen */
+  min-height: 400px; 
   display: flex;
   flex-direction: column;
   background-color: var(--color-dark);
@@ -133,11 +133,9 @@
   }
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES
-   ========================================================================== */
 
-/* === NORMAL & LARGE PHONES (min-width: 375px) === */
+
+
 @media (min-width: 375px) {
   .hero {
     min-height: 480px;
@@ -162,7 +160,7 @@
   }
 }
 
-/* === TABLETS (min-width: 768px) === */
+
 @media (min-width: 768px) {
   .hero-title {
     font-size: clamp(2rem, 5vw, 2.8rem);
@@ -190,7 +188,7 @@
   }
 }
 
-/* === DESKTOPS (min-width: 1024px) === */
+
 @media (min-width: 1024px) {
   .hero {
     height: 100vh;
@@ -218,7 +216,7 @@
   }
 }
 
-/* === LARGE DESKTOPS (min-width: 1440px) === */
+
 @media (min-width: 1440px) {
   .hero-bottom-content {
     left: var(--space-2xl);
@@ -226,7 +224,7 @@
   }
 }
 
-/* === LANDSCAPE PHONES === */
+
 @media (max-width: 767px) and (orientation: landscape) {
   .hero {
     height: 100vh;
@@ -271,7 +269,7 @@
   }
 }
 
-/* === SAFE AREA / NOTCH SUPPORT === */
+
 @supports (padding: env(safe-area-inset-top)) {
   .hero-bottom-content {
     padding-bottom: env(safe-area-inset-bottom);

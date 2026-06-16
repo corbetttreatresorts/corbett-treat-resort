@@ -23,19 +23,19 @@ const CATEGORIES = [
 
 export default function GalleryGrid() {
   const [activeCategory, setActiveCategory] = useState("all");
-  const [lightboxIndex, setLightboxIndex] = useState(null); // null means closed
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  // Filtered images
+
   const filteredImages = activeCategory === "all" 
     ? ALL_GALLERY_IMAGES 
     : ALL_GALLERY_IMAGES.filter(img => img.category === activeCategory);
 
-  // Close lightbox
+
   const closeLightbox = () => {
     setLightboxIndex(null);
   };
 
-  // Navigate lightbox
+
   const nextImage = useCallback(() => {
     setLightboxIndex((prevIndex) => {
       if (prevIndex === null) return null;
@@ -50,7 +50,7 @@ export default function GalleryGrid() {
     });
   }, [filteredImages.length]);
 
-  // Keyboard navigation
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (lightboxIndex === null) return;
@@ -63,7 +63,7 @@ export default function GalleryGrid() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [lightboxIndex, nextImage, prevImage]);
 
-  // Prevent body scroll when lightbox is open
+
   useEffect(() => {
     if (lightboxIndex !== null) {
       document.body.style.overflow = "hidden";
@@ -77,7 +77,7 @@ export default function GalleryGrid() {
 
   return (
     <div className="gallery-grid-wrapper">
-      {/* Category Tabs */}
+      
       <div className="gallery-filter-tabs">
         {CATEGORIES.map((cat) => (
           <button
@@ -85,7 +85,7 @@ export default function GalleryGrid() {
             className={`filter-btn ${activeCategory === cat.id ? "active" : ""}`}
             onClick={() => {
               setActiveCategory(cat.id);
-              setLightboxIndex(null); // Reset lightbox on filter change
+              setLightboxIndex(null);
             }}
           >
             {cat.label}
@@ -93,7 +93,7 @@ export default function GalleryGrid() {
         ))}
       </div>
 
-      {/* Grid Display */}
+      
       <div className="gallery-masonry-grid">
         {filteredImages.map((image, index) => (
           <div 
@@ -123,7 +123,7 @@ export default function GalleryGrid() {
         ))}
       </div>
 
-      {/* Fullscreen Lightbox Modal */}
+      
       {lightboxIndex !== null && (
         <div className="lightbox-overlay" onClick={closeLightbox}>
           <button 

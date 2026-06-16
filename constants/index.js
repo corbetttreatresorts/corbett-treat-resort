@@ -1,11 +1,11 @@
-// =============================================================================
-// CONSTANTS — Corbett Treat Resort
-// Saari hardcoded values yahan centralize ki gayi hain.
-// Naye numbers ya links yahan update karo, changes automatically poore app mein
-// reflect ho jaayenge.
-// =============================================================================
 
-// --- Contact Information ---
+
+
+
+
+
+
+
 export const CONTACT_PHONES = [
   { label: "+91 80570 94258", href: "tel:+918057094258" },
   { label: "+91 98189 22066", href: "tel:+919818922066" },
@@ -19,11 +19,11 @@ export const WHATSAPP = {
 
 export const BOOK_NOW_URL = `https://wa.me/${WHATSAPP.number}?text=${encodeURIComponent(WHATSAPP.presetMessage)}`;
 
-// --- Address ---
+
 export const RESORT_ADDRESS =
   "Village Dhela, Jim Corbett National Park, Ramnagar, Uttarakhand 244715";
 
-// --- Navigation Links ---
+
 export const NAV_LINKS = [
   { num: "01", label: "Home", href: "#home" },
   { num: "02", label: "About", href: "#about" },
@@ -37,7 +37,7 @@ export const NAV_LINKS = [
   { num: "10", label: "Contact", href: "#contact" },
 ];
 
-// --- Amenities Data (icon references as strings, resolved in component) ---
+
 export const AMENITIES = [
   {
     id: 1,
@@ -73,10 +73,10 @@ export const AMENITIES = [
   },
 ];
 
-// --- Email Address ---
+
 export const CONTACT_EMAIL = "corbetttreatresorts@gmail.com";
 
-// --- Stats Data (Why Choose Us) ---
+
 export const WHY_CHOOSE_US_STATS = [
   { label: "Guests Served", value: "5.0k+" },
   { label: "Team Members", value: "50+" },
@@ -84,7 +84,7 @@ export const WHY_CHOOSE_US_STATS = [
   { label: "Customer Satisfaction", value: "99%" },
 ];
 
-// --- Gallery Images ---
+
 export const GALLERY_IMAGES = [
   {
     src: "/assets/images/swimming-pool-daytime-view.jpeg",
@@ -118,18 +118,18 @@ export const GALLERY_IMAGES = [
   },
 ];
 
-// --- Social Links ---
+
 export const SOCIAL_LINKS = [
   { label: "Instagram", href: "#", platform: "instagram" },
   { label: "Facebook", href: "#", platform: "facebook" },
   { label: "Twitter", href: "#", platform: "twitter" },
 ];
 
-// --- Brand Info ---
+
 export const BRAND_DESCRIPTION =
   "Experience the untamed beauty of Jim Corbett National Park while enjoying unmatched luxury, warm hospitality, and unforgettable moments.";
 
-// --- Complete Gallery Images with Categories ---
+
 export const ALL_GALLERY_IMAGES = [
   {
     src: "/assets/images/swimming-pool-daytime-view.jpeg",

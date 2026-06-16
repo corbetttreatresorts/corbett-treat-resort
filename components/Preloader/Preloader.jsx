@@ -3,13 +3,7 @@
 import Image from "next/image";
 import "./Preloader.css";
 
-/**
- * Preloader — Full-screen loading overlay
- *
- * Kya: `<img>` → `next/image` fix kiya.
- * Kyun: next/image automatic image optimization karta hai.
- * Note: `priority` zaroor diya kyunki yeh initially visible hota hai.
- */
+
 export default function Preloader({ active }) {
   return (
     <div

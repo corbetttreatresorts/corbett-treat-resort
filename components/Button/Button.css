@@ -1,8 +1,6 @@
-/* ==========================================================================
-   REUSABLE BUTTON SYSTEM
-   ========================================================================== */
 
-/* --- Base Button Styles --- */
+
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -18,7 +16,7 @@
   box-sizing: border-box;
 }
 
-/* --- Variant: Primary (Forest Green) --- */
+
 .btn-primary {
   background-color: var(--color-primary);
   color: var(--color-light);
@@ -30,7 +28,7 @@
   box-shadow: 0 4px 12px rgba(0, 77, 46, 0.2);
 }
 
-/* --- Variant: Gold --- */
+
 .btn-gold {
   background-color: #c58a2a;
   color: var(--color-light);
@@ -42,7 +40,7 @@
   box-shadow: 0 4px 12px rgba(197, 138, 42, 0.3);
 }
 
-/* --- Variant: Outline --- */
+
 .btn-outline {
   background-color: transparent;
   border-color: var(--color-primary);
@@ -55,7 +53,7 @@
   transform: translateY(-2px);
 }
 
-/* --- Size: Small (Navbar style) --- */
+
 .btn-small {
   height: 38px;
   padding: 0 1.25rem;
@@ -64,7 +62,7 @@
   border-radius: var(--border-radius);
 }
 
-/* --- Size: Medium (Standard CTA style) --- */
+
 .btn-medium {
   height: 48px;
   padding: 0 1.75rem;
@@ -73,7 +71,7 @@
   border-radius: var(--border-radius);
 }
 
-/* --- Size: Large (Pill CTA style) --- */
+
 .btn-large {
   height: 3.25rem;
   padding: 0 2rem;
@@ -82,7 +80,7 @@
   border-radius: 50px;
 }
 
-/* --- Icon Alignment --- */
+
 .btn-icon {
   display: inline-flex;
   align-items: center;
@@ -99,7 +97,7 @@
   transform: translateX(4px);
 }
 
-/* --- Disabled State --- */
+
 .btn-disabled,
 .btn:disabled {
   opacity: 0.5;

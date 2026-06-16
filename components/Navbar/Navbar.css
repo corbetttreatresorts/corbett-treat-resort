@@ -80,11 +80,9 @@
   display: none !important;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES
-   ========================================================================== */
 
-/* === NORMAL & LARGE PHONES (min-width: 375px) === */
+
+
 @media (min-width: 375px) {
   .logo-img {
     height: 44px !important;
@@ -95,10 +93,10 @@
   }
 }
 
-/* === TABLETS (min-width: 768px) === */
+
 @media (min-width: 768px) {
   .navbar {
-    padding: var(--space-sm) var(--space-xl); /* 16px top/bottom, 48px left/right */
+    padding: var(--space-sm) var(--space-xl); 
   }
 
   .navbar.scrolled {
@@ -114,7 +112,7 @@
   }
 }
 
-/* === DESKTOPS (min-width: 1024px) === */
+
 @media (min-width: 1024px) {
   .navbar {
     padding: var(--space-md) 4%;
@@ -168,7 +166,7 @@
   }
 }
 
-/* === LARGE DESKTOPS (min-width: 1440px) === */
+
 @media (min-width: 1440px) {
   .navbar {
     padding: var(--space-md) var(--space-2xl);
@@ -179,7 +177,7 @@
   }
 }
 
-/* === SAFE AREA / NOTCH SUPPORT === */
+
 @supports (padding: env(safe-area-inset-top)) {
   .navbar {
     padding-top: max(0.75rem, env(safe-area-inset-top));

@@ -2,17 +2,11 @@
 
 import "./Contact.css";
 import { useState } from "react";
-import Button from "../Button";
+import Button from "../../Button";
 import { RiMapPinLine, RiPhoneLine, RiMailSendLine } from "react-icons/ri";
 import { CONTACT_PHONES, RESORT_ADDRESS, CONTACT_EMAIL } from "@/constants";
 
-/**
- * Contact Section — Interactive UI for Inquiries
- *
- * Kya: Ek naya "Contact Form" section layout design.
- * Kyun: Users ki taraf se inquiries receive karne ke liye form UI add karna zaruri tha.
- * Benefit: Direct lead generation aur users ke questions ke liye clear channel.
- */
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -21,7 +15,7 @@ export default function Contact() {
     message: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState(null); // 'success' or 'error'
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -32,13 +26,13 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call for now since backend is not connected
+
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus("success");
       setFormData({ name: "", email: "", phone: "", message: "" });
       
-      // Reset success message after 5 seconds
+
       setTimeout(() => setSubmitStatus(null), 5000);
     }, 1500);
   };
@@ -55,7 +49,7 @@ export default function Contact() {
         </div>
 
         <div className="contact-grid">
-          {/* Contact Details Column */}
+          
           <div className="contact-info">
             <div className="info-card">
               <div className="info-icon">
@@ -92,7 +86,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Contact Form Column */}
+          
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">

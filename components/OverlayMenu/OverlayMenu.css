@@ -1,6 +1,4 @@
-/* ==========================================================================
-   OVERLAY MENU COMPONENT STYLES
-   ========================================================================== */
+
 .overlay-menu {
   position: fixed;
   top: 0;
@@ -19,12 +17,12 @@
   -webkit-overflow-scrolling: touch;
   will-change: clip-path;
 
-  /* Custom Scrollbar for Firefox */
+  
   scrollbar-width: thin;
   scrollbar-color: rgba(0, 77, 46, 0.4) rgba(255, 255, 255, 0.02);
 }
 
-/* Custom Sleek Scrollbar for Chrome/Safari on mobile overlay */
+
 .overlay-menu::-webkit-scrollbar {
   width: 4px;
 }
@@ -44,7 +42,7 @@
   pointer-events: auto;
 }
 
-/* Scroll Indicator */
+
 .overlay-scroll-indicator {
   position: fixed;
   bottom: var(--space-lg);
@@ -92,12 +90,12 @@
   }
 }
 
-/* Overlay Header */
+
 .overlay-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 5%; /* Base mobile spacing */
+  padding: 0.5rem 5%; 
   position: sticky;
   top: 0;
   background: var(--color-dark-alt);
@@ -110,7 +108,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* Animated X Close Button */
+
 .overlay-close {
   position: relative;
   width: 44px;
@@ -145,14 +143,14 @@
   transform: rotate(90deg);
 }
 
-/* Overlay Body */
+
 .overlay-body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 5% 1.5rem; /* Base padding for small mobile */
-  gap: var(--space-md); /* 24px */
-  overflow: visible; /* Allow scroll overflow */
+  padding: 0.5rem 5% 1.5rem; 
+  gap: var(--space-md); 
+  overflow: visible; 
 }
 
 .overlay-nav {
@@ -172,8 +170,8 @@
 .overlay-links li {
   display: flex;
   align-items: center;
-  gap: var(--space-xs); /* 8px */
-  padding: var(--space-xs) 0; /* 8px */
+  gap: var(--space-xs); 
+  padding: var(--space-xs) 0; 
   min-height: 44px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   opacity: 0;
@@ -207,7 +205,7 @@
 }
 
 .overlay-links a {
-  font-size: 1.4rem; /* Base link size for small phones */
+  font-size: 1.4rem; 
   font-weight: 500;
   letter-spacing: -1px;
   color: rgba(255, 255, 255, 0.4);
@@ -220,7 +218,7 @@
   letter-spacing: -1px;
 }
 
-/* Right Info Panel */
+
 .overlay-info {
   flex: none;
   display: flex;
@@ -242,7 +240,7 @@
 }
 
 .overlay-info-block {
-  margin-bottom: var(--space-xs); /* 8px */
+  margin-bottom: var(--space-xs); 
 }
 
 .overlay-info-block h4 {
@@ -273,7 +271,7 @@
 }
 
 .overlay-cta {
-  margin-top: var(--space-xs); /* 8px */
+  margin-top: var(--space-xs); 
   padding: 0;
   height: 44px;
   font-size: var(--font-size-small);
@@ -286,11 +284,9 @@
   justify-content: center;
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES
-   ========================================================================== */
 
-/* === NORMAL & LARGE PHONES (min-width: 375px) === */
+
+
 @media (min-width: 375px) {
   .overlay-header {
     padding: var(--space-md) 4%;
@@ -305,7 +301,7 @@
   }
 }
 
-/* === TABLETS (min-width: 768px) === */
+
 @media (min-width: 768px) {
   .overlay-links a {
     font-size: clamp(2rem, 5vw, 3rem);
@@ -328,7 +324,7 @@
   }
 }
 
-/* === DESKTOPS (min-width: 1024px) === */
+
 @media (min-width: 1024px) {
   .overlay-menu {
     overflow: hidden;
@@ -401,14 +397,14 @@
   }
 }
 
-/* === LARGE DESKTOPS (min-width: 1440px) === */
+
 @media (min-width: 1440px) {
   .overlay-body {
     padding: var(--space-lg) var(--space-2xl) var(--space-2xl);
   }
 }
 
-/* === SAFE AREA / NOTCH SUPPORT === */
+
 @supports (padding: env(safe-area-inset-top)) {
   .overlay-menu {
     padding-bottom: env(safe-area-inset-bottom);

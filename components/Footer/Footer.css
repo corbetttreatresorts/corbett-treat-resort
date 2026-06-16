@@ -1,10 +1,8 @@
-/* ==========================================================================
-   FOOTER COMPONENT STYLES
-   ========================================================================== */
+
 .footer-section {
   position: relative;
-  background-color: #080808; /* Extremely dark for footer distinction */
-  border-top: 1px solid rgba(212, 175, 55, 0.2); /* Subtle Gold Top Border */
+  background-color: #080808; 
+  border-top: 1px solid rgba(212, 175, 55, 0.2); 
   padding-top: var(--space-3xl);
   color: rgba(255, 255, 255, 0.7);
 }
@@ -15,9 +13,7 @@
   padding: 0 var(--space-md);
 }
 
-/* ==========================================================================
-   TOP GRID LAYOUT
-   ========================================================================== */
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -45,7 +41,7 @@
   background-color: #d4af37;
 }
 
-/* --- Brand Column --- */
+
 .brand-col {
   display: flex;
   flex-direction: column;
@@ -93,7 +89,7 @@
   transform: translateY(-3px);
 }
 
-/* --- Quick Links Columns --- */
+
 .footer-links {
   list-style: none;
   padding: 0;
@@ -132,7 +128,7 @@
   transform: translateX(0);
 }
 
-/* --- Contact Info Column --- */
+
 .contact-col {
   display: flex;
   flex-direction: column;
@@ -165,9 +161,7 @@
   color: #d4af37;
 }
 
-/* ==========================================================================
-   BOTTOM FOOTER & COPYRIGHT
-   ========================================================================== */
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding: var(--space-md) 0;
@@ -194,11 +188,9 @@
   color: var(--color-light);
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM
-   ========================================================================== */
 
-/* === TABLETS (min-width: 768px) === */
+
+
 @media (min-width: 768px) {
   .footer-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -211,7 +203,7 @@
   }
 }
 
-/* === DESKTOPS (min-width: 1024px) === */
+
 @media (min-width: 1024px) {
   .footer-grid {
     grid-template-columns: 2fr 1fr 1fr 1.5fr;

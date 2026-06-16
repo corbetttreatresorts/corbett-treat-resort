@@ -1,6 +1,4 @@
-/* ==========================================================================
-   FLOATING CONTACT BUTTONS (Call & WhatsApp)
-   ========================================================================== */
+
 
 .floating-contact-container {
   position: fixed;
@@ -9,10 +7,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  z-index: 9999; /* Higher than header and overlay elements */
-  pointer-events: none; /* Let clicks pass through container, only handle buttons */
+  z-index: 9999; 
+  pointer-events: none; 
   
-  /* Hidden state by default (in Hero section) */
+  
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
@@ -27,7 +25,7 @@
   transform: translateY(0);
 }
 
-/* --- Base Floating Button Styling --- */
+
 .floating-btn {
   pointer-events: auto;
   display: flex;
@@ -57,7 +55,7 @@
   transform: translateY(-1px) scale(0.98);
 }
 
-/* --- Floating Call (Gold theme) --- */
+
 .floating-call-btn {
   background-color: #c58a2a;
 }
@@ -73,7 +71,7 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* --- Call Dropdown Menu --- */
+
 .call-dropdown-menu {
   pointer-events: auto;
   position: absolute;
@@ -127,7 +125,7 @@
   font-size: 1.05rem;
 }
 
-/* --- Floating WhatsApp (Brand Green) --- */
+
 .floating-wa-btn {
   background-color: #25d366;
 }
@@ -137,7 +135,7 @@
   box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45);
 }
 
-/* --- Pulse Wave Animation (WhatsApp specific) --- */
+
 .pulse-glow {
   position: absolute;
   top: 0;
@@ -161,11 +159,9 @@
   }
 }
 
-/* ==========================================================================
-   RESPONSIVE LAYOUT adjustments
-   ========================================================================== */
 
-/* === SMALL DEVICES (Mobile viewport adjustments) === */
+
+
 @media (max-width: 768px) {
   .floating-contact-container {
     bottom: 1.5rem;

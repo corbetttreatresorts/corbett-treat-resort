@@ -1,10 +1,8 @@
-/* ==========================================================================
-   WHY CHOOSE US COMPONENT STYLES
-   ========================================================================== */
+
 .why-choose-us-section {
   position: relative;
   padding: var(--space-2xl) 0;
-  background-color: var(--color-dark-alt); /* Slightly contrasting dark bg */
+  background-color: var(--color-dark-alt); 
   border-top: 1px solid rgba(255, 255, 255, 0.03);
   border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
@@ -18,9 +16,7 @@
   gap: var(--space-2xl);
 }
 
-/* ==========================================================================
-   TOP SECTION: CONTENT & IMAGE GRID
-   ========================================================================== */
+
 .wcu-top-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -28,7 +24,7 @@
   align-items: center;
 }
 
-/* Left Content */
+
 .wcu-content {
   display: flex;
   flex-direction: column;
@@ -42,7 +38,7 @@
   display: block;
   font-size: var(--font-size-small);
   letter-spacing: var(--letter-spacing-label);
-  color: #d4af37; /* Luxury Gold Accent */
+  color: #d4af37; 
   text-transform: uppercase;
   font-weight: 500;
   margin-bottom: 8px;
@@ -71,7 +67,7 @@
   line-height: 1.7;
 }
 
-/* Right Image */
+
 .wcu-image-wrapper {
   position: relative;
   width: 100%;
@@ -89,12 +85,12 @@
   transform: scale(1.05);
 }
 
-/* Decorative Accents on Image */
+
 .wcu-corner-accent {
   position: absolute;
   width: 40px;
   height: 40px;
-  border: 2px solid #d4af37; /* Gold */
+  border: 2px solid #d4af37; 
   z-index: 2;
   pointer-events: none;
   opacity: 0.8;
@@ -120,9 +116,7 @@
   border-top: none;
 }
 
-/* ==========================================================================
-   BOTTOM SECTION: STATS GRID
-   ========================================================================== */
+
 .wcu-stats-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -158,11 +152,9 @@
   transform: translateY(-3px);
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES
-   ========================================================================== */
 
-/* === TABLETS (min-width: 768px) === */
+
+
 @media (min-width: 768px) {
   .why-choose-us-section {
     padding: var(--space-3xl) 0;
@@ -173,7 +165,7 @@
   }
 }
 
-/* === DESKTOPS (min-width: 1024px) === */
+
 @media (min-width: 1024px) {
   .wcu-container {
     gap: var(--space-3xl);
@@ -189,7 +181,7 @@
   }
 }
 
-/* === LARGE DESKTOPS (min-width: 1440px) === */
+
 @media (min-width: 1440px) {
   .wcu-container {
     max-width: 1320px;

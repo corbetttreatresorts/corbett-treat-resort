@@ -1,6 +1,4 @@
-/* ==========================================================================
-   PRELOADER COMPONENT STYLES
-   ========================================================================== */
+
 .preloader {
   position: fixed;
   top: 0;
@@ -21,7 +19,7 @@
 
 .preloader-logo {
   height: 56px !important;
-  width: auto !important; /* next/image override */
+  width: auto !important; 
   filter: brightness(0) invert(1);
   animation: pulseLogo 2s infinite ease-in-out;
   margin-bottom: var(--space-md);
@@ -51,9 +49,7 @@
   visibility: hidden;
 }
 
-/* ==========================================================================
-   KEYFRAME ANIMATIONS FOR PRELOADER
-   ========================================================================== */
+
 @keyframes pulseLogo {
   0%,
   100% {
@@ -75,11 +71,9 @@
   }
 }
 
-/* ==========================================================================
-   RESPONSIVE DESIGN SYSTEM & MEDIA QUERIES
-   ========================================================================== */
 
-/* === DESKTOPS (min-width: 1024px) === */
+
+
 @media (min-width: 1024px) {
   .preloader-logo {
     height: 80px !important;
@@ -91,7 +85,7 @@
   }
 }
 
-/* === LANDSCAPE PHONES === */
+
 @media (max-width: 767px) and (orientation: landscape) {
   .preloader-logo {
     height: 40px !important;

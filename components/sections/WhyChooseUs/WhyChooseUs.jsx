@@ -2,13 +2,7 @@ import "./WhyChooseUs.css";
 import Image from "next/image";
 import { WHY_CHOOSE_US_STATS } from "@/constants";
 
-/**
- * Why Choose Us Section — Static content, Server Component
- *
- * Kya: Ek naya "Why Choose Us" section layout design jisme stats aur brand info hai.
- * Kyun: Screenshot layout ki basis pe brand trust badhane ke liye add kiya gaya.
- * Benefit: Server-side rendering ke sath SEO-friendly aur visually rich section.
- */
+
 export default function WhyChooseUs() {
 
 
@@ -16,9 +10,9 @@ export default function WhyChooseUs() {
     <section className="why-choose-us-section" id="why-choose-us">
       <div className="wcu-container">
         
-        {/* Top Section: Content and Image */}
+        
         <div className="wcu-top-grid">
-          {/* Left Content */}
+          
           <div className="wcu-content">
             <div className="wcu-header">
               <span className="wcu-subtitle">WHY CHOOSE CORBETT TREAT RESORT</span>
@@ -34,7 +28,7 @@ export default function WhyChooseUs() {
             </p>
           </div>
 
-          {/* Right Image */}
+          
           <div className="wcu-image-wrapper">
             <Image
               src="/assets/images/bedroom-suite-1.jpeg"
@@ -44,13 +38,13 @@ export default function WhyChooseUs() {
               style={{ objectFit: "cover" }}
               className="wcu-image"
             />
-            {/* Elegant Corner Decorative Accents */}
+            
             <div className="wcu-corner-accent top-left" />
             <div className="wcu-corner-accent bottom-right" />
           </div>
         </div>
 
-        {/* Bottom Section: Stats Grid */}
+        
         <div className="wcu-stats-grid">
           {WHY_CHOOSE_US_STATS.map((stat, index) => (
             <div className="wcu-stat-item" key={index}>

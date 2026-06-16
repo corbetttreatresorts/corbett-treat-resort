@@ -18,13 +18,7 @@ import {
   BRAND_DESCRIPTION 
 } from "@/constants";
 
-/**
- * Footer Section — Main Site Footer
- *
- * Kya: Website ka bottom footer area design kiya gaya hai.
- * Kyun: Professional look, quick navigation links aur social media channels display karne ke liye.
- * Benefit: User retention improve hota hai aur navigation easy banti hai.
- */
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -32,10 +26,10 @@ export default function Footer() {
     <footer className="footer-section">
       <div className="footer-container">
         
-        {/* Top Footer: Grid Layout */}
+        
         <div className="footer-grid">
           
-          {/* Brand Column */}
+          
           <div className="footer-col brand-col">
             <Link href="/" className="footer-logo">
               <Image
@@ -69,7 +63,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links Column */}
+          
           <div className="footer-col">
             <h4 className="footer-title">Quick Links</h4>
             <ul className="footer-links">
@@ -81,7 +75,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Experience Links Column */}
+          
           <div className="footer-col">
             <h4 className="footer-title">Experiences</h4>
             <ul className="footer-links">
@@ -93,7 +87,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info Column */}
+          
           <div className="footer-col contact-col">
             <h4 className="footer-title">Get in Touch</h4>
             <div className="footer-contact-item">
@@ -115,7 +109,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom Footer: Copyright */}
+        
         <div className="footer-bottom">
           <p>&copy; {currentYear} Corbett Treat Resort. All Rights Reserved.</p>
           <div className="footer-bottom-links">

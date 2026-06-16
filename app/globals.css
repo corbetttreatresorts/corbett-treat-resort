@@ -1,8 +1,4 @@
-/* ==========================================================================
-   DESIGN SYSTEM & VARIABLES
-   ========================================================================== */
 :root {
-  /* Spacing Scale (8px, 16px, 24px, 32px, 48px, 64px, 96px) */
   --space-xs: 8px;
   --space-sm: 16px;
   --space-md: 24px;
@@ -11,20 +7,16 @@
   --space-2xl: 64px;
   --space-3xl: 96px;
 
-  /* Typography Scale */
   --font-size-h1: clamp(2.5rem, 5vw, 4.5rem);
   --font-size-body-reg: clamp(0.875rem, 1vw, 1.05rem);
   --font-size-small: clamp(0.75rem, 0.8vw, 0.85rem);
 
-  /* Line Heights */
   --line-height-heading: 1.1;
   --line-height-body: 1.6;
 
-  /* Letter Spacing */
   --letter-spacing-heading: -1.5px;
   --letter-spacing-label: 2px;
 
-  /* Colors */
   --color-primary: #004d2e;
   --color-primary-dark: #003620;
   --color-dark: #000000;
@@ -32,14 +24,10 @@
   --color-light: #ffffff;
   --glass-bg: rgba(0, 0, 0, 0.6);       
 
-  /* Layout & Alignment System */
   --border-radius: 4px;
   --transition-base: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* ==========================================================================
-   GLOBAL RESET & SCROLLBAR
-   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -62,7 +50,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Scrollbar for the entire website */
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
@@ -71,18 +58,14 @@ body {
   background: var(--color-dark);
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 77, 46, 0.5); /* #004D2E with 50% opacity */
+  background: rgba(0, 77, 46, 0.5);
   border-radius: 6px;
   transition: var(--transition-base);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 77, 46, 0.85); /* #004D2E with 85% opacity */
+  background: rgba(0, 77, 46, 0.85);
 }
 
-/* Custom Scrollbar for Firefox (merged into global * reset above) */
-/* scrollbar-width & scrollbar-color handled via * block below */
-
-/* Scroll Lock on HTML and Body when overlay menu is open */
 html.menu-open,
 html.menu-open body {
   overflow: hidden !important;
@@ -90,9 +73,6 @@ html.menu-open body {
   height: 100dvh !important;
 }
 
-/* ==========================================================================
-   TYPOGRAPHY INHERITANCE / SYSTEM (Base for Mobiles < 375px)
-   ========================================================================== */
 h1,
 .hero-title {
   font-family: var(--font-playfair), "Playfair Display", serif;
@@ -100,19 +80,13 @@ h1,
 
 h1,
 .h1 {
-  font-size: 1.35rem; /* Base size for very small phones */
+  font-size: 1.35rem;
   font-weight: 500;
   line-height: var(--line-height-heading);
   letter-spacing: var(--letter-spacing-heading);
 }
 
 p {
-  font-size: 0.8rem; /* Base size for very small phones */
+  font-size: 0.8rem;
   line-height: var(--line-height-body);
 }
-
-/* ==========================================================================
-   BUTTON SYSTEM
-   Button styles ab Button.css mein hain (component-based architecture).
-   Yahan sirf global utility classes hain jo Button component override karta hai.
-   ========================================================================== */
