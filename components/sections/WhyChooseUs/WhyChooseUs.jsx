@@ -20,7 +20,7 @@ export default function WhyChooseUs() {
             </div>
 
             <h2 className="wcu-heading">
-              We're Dedicated To Providing You Unforgettable Experience. Whether You're Here For Business Or Leisure
+              We&apos;re Dedicated To Providing You Unforgettable Experience. Whether You&apos;re Here For Business Or Leisure
             </h2>
 
             <p className="wcu-description">
