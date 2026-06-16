@@ -6,13 +6,12 @@ import Button from "../../Button";
 import { RiMapPinLine, RiPhoneLine, RiMailSendLine } from "react-icons/ri";
 import { CONTACT_PHONES, RESORT_ADDRESS, CONTACT_EMAIL } from "@/constants";
 
-
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null); // 'success', 'error', or null
@@ -22,16 +21,16 @@ export default function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error for this field as user types
     if (errors[name]) {
-      setErrors(prev => ({ ...prev, [name]: "" }));
+      setErrors((prev) => ({ ...prev, [name]: "" }));
     }
   };
 
   const validate = () => {
     const newErrors = {};
-    
+
     // Name validation
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
@@ -87,7 +86,7 @@ export default function Contact() {
       hour: "2-digit",
       minute: "2-digit",
       second: "2-digit",
-      hour12: true
+      hour12: true,
     });
 
     try {
@@ -100,7 +99,7 @@ export default function Contact() {
           method: "POST",
           mode: "no-cors",
           headers: {
-            "Content-Type": "text/plain"
+            "Content-Type": "text/plain",
           },
           body: JSON.stringify({
             name: formData.name,
@@ -108,9 +107,9 @@ export default function Contact() {
             phone: formData.phone,
             message: formData.message,
             date: formattedDate,
-            timestamp: formattedDate
-          })
-        }
+            timestamp: formattedDate,
+          }),
+        },
       );
 
       // In no-cors mode, the response is opaque, meaning we can't read response.ok or response.status.
@@ -118,28 +117,30 @@ export default function Contact() {
       setSubmitStatus("success");
       setToast({
         show: true,
-        message: "Thank you! Your message has been sent successfully. We will get back to you soon.",
-        type: "success"
+        message:
+          "Thank you! Your message has been sent successfully. We will get back to you soon.",
+        type: "success",
       });
       setFormData({ name: "", email: "", phone: "", message: "" });
       setErrors({});
 
       // Auto hide toast after 5 seconds
       setTimeout(() => {
-        setToast(prev => ({ ...prev, show: false }));
+        setToast((prev) => ({ ...prev, show: false }));
       }, 5000);
     } catch (error) {
       setSubmitStatus("error");
-      const err = error.message || "Something went wrong. Please try again later.";
+      const err =
+        error.message || "Something went wrong. Please try again later.";
       setErrorMessage(err);
       setToast({
         show: true,
         message: err,
-        type: "error"
+        type: "error",
       });
-      
+
       setTimeout(() => {
-        setToast(prev => ({ ...prev, show: false }));
+        setToast((prev) => ({ ...prev, show: false }));
       }, 5000);
     } finally {
       setIsSubmitting(false);
@@ -153,12 +154,12 @@ export default function Contact() {
           <span className="contact-subtitle">GET IN TOUCH</span>
           <h2 className="contact-heading">Plan Your Perfect Escape</h2>
           <p className="contact-desc">
-            Reach out to our team for reservations, special requests, or any questions about your upcoming stay at Corbett Treat Resort.
+            Reach out to our team for reservations, special requests, or any
+            questions about your upcoming stay at Corbett Treat Resort.
           </p>
         </div>
 
         <div className="contact-grid">
-          
           <div className="contact-info">
             <div className="info-card">
               <div className="info-icon">
@@ -190,12 +191,13 @@ export default function Contact() {
               </div>
               <div>
                 <h3>Email Us</h3>
-                <p><a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p>
+                <p>
+                  <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+                </p>
               </div>
             </div>
           </div>
 
-          
           <div className="contact-form-wrapper">
             <form className="contact-form" onSubmit={handleSubmit} noValidate>
               <div className="form-group">
@@ -206,10 +208,17 @@ export default function Contact() {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="John Doe"
+                  placeholder="Enter your full name"
                 />
                 {errors.name && (
-                  <span className="error-msg" style={{ color: "#ff5252", fontSize: "0.8rem", marginTop: "4px" }}>
+                  <span
+                    className="error-msg"
+                    style={{
+                      color: "#ff5252",
+                      fontSize: "0.8rem",
+                      marginTop: "4px",
+                    }}
+                  >
                     {errors.name}
                   </span>
                 )}
@@ -224,10 +233,17 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="john@example.com"
+                    placeholder="Enter your email address"
                   />
                   {errors.email && (
-                    <span className="error-msg" style={{ color: "#ff5252", fontSize: "0.8rem", marginTop: "4px" }}>
+                    <span
+                      className="error-msg"
+                      style={{
+                        color: "#ff5252",
+                        fontSize: "0.8rem",
+                        marginTop: "4px",
+                      }}
+                    >
                       {errors.email}
                     </span>
                   )}
@@ -240,10 +256,17 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    placeholder="+91 98765 43210"
+                    placeholder="Enter your phone number"
                   />
                   {errors.phone && (
-                    <span className="error-msg" style={{ color: "#ff5252", fontSize: "0.8rem", marginTop: "4px" }}>
+                    <span
+                      className="error-msg"
+                      style={{
+                        color: "#ff5252",
+                        fontSize: "0.8rem",
+                        marginTop: "4px",
+                      }}
+                    >
                       {errors.phone}
                     </span>
                   )}
@@ -258,10 +281,17 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
-                  placeholder="Tell us about your dates, group size, or special requirements..."
+                  placeholder="Write your message here"
                 />
                 {errors.message && (
-                  <span className="error-msg" style={{ color: "#ff5252", fontSize: "0.8rem", marginTop: "4px" }}>
+                  <span
+                    className="error-msg"
+                    style={{
+                      color: "#ff5252",
+                      fontSize: "0.8rem",
+                      marginTop: "4px",
+                    }}
+                  >
                     {errors.message}
                   </span>
                 )}
@@ -273,21 +303,20 @@ export default function Contact() {
                 size="large"
                 className="submit-btn"
                 disabled={isSubmitting}
-                style={{ width: '100%', justifyContent: 'center' }}
+                style={{ width: "100%", justifyContent: "center" }}
               >
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
 
               {submitStatus === "success" && (
                 <div className="form-status success">
-                  Thank you! Your message has been sent successfully. We will get back to you soon.
+                  Thank you! Your message has been sent successfully. We will
+                  get back to you soon.
                 </div>
               )}
 
               {submitStatus === "error" && (
-                <div className="form-status error">
-                  {errorMessage}
-                </div>
+                <div className="form-status error">{errorMessage}</div>
               )}
             </form>
           </div>
@@ -296,12 +325,14 @@ export default function Contact() {
 
       {/* Toast Notification Container */}
       <div className="toast-container">
-        <div className={`toast-notification ${toast.type} ${toast.show ? "show" : ""}`}>
+        <div
+          className={`toast-notification ${toast.type} ${toast.show ? "show" : ""}`}
+        >
           <div className="toast-content">{toast.message}</div>
           <button
             type="button"
             className="toast-close"
-            onClick={() => setToast(prev => ({ ...prev, show: false }))}
+            onClick={() => setToast((prev) => ({ ...prev, show: false }))}
           >
             &times;
           </button>
