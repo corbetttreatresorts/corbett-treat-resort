@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import Image from "next/image";
 import { 
    RiCloseLine, 
@@ -10,6 +10,10 @@ import {
 } from "react-icons/ri";
 import { ALL_GALLERY_IMAGES } from "@/constants";
 import "./GalleryGrid.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const CATEGORIES = [
   { id: "all", label: "ALL" },
@@ -26,10 +30,59 @@ export default function GalleryGrid() {
   const [lightboxIndex, setLightboxIndex] = useState(null);
   const [isZoomed, setIsZoomed] = useState(false);
   const [zoomPos, setZoomPos] = useState({ x: 50, y: 50 });
+  
+  const containerRef = useRef(null);
+  const itemsRef = useRef([]);
 
   const filteredImages = activeCategory === "all" 
     ? ALL_GALLERY_IMAGES 
     : ALL_GALLERY_IMAGES.filter(img => img.category === activeCategory);
+
+  useEffect(() => {
+    // Initial scroll entrance animation
+    const ctx = gsap.context(() => {
+      gsap.from(".filter-btn", {
+        y: 20,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.05,
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 85%",
+        }
+      });
+      
+      gsap.fromTo(
+        itemsRef.current,
+        { y: 50, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          stagger: 0.1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".gallery-masonry-grid",
+            start: "top 85%",
+          }
+        }
+      );
+    }, containerRef);
+    
+    return () => ctx.revert();
+  }, []);
+
+  // Animation when category changes
+  useEffect(() => {
+    if (itemsRef.current.length > 0) {
+      gsap.fromTo(
+        itemsRef.current,
+        { scale: 0.9, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.5, stagger: 0.05, ease: "power2.out", overwrite: true }
+      );
+    }
+  }, [activeCategory, filteredImages.length]);
 
 
   const closeLightbox = () => {
@@ -92,7 +145,7 @@ export default function GalleryGrid() {
   };
 
   return (
-    <div className="gallery-grid-wrapper">
+    <div className="gallery-grid-wrapper" ref={containerRef}>
       
       <div className="gallery-filter-tabs">
         {CATEGORIES.map((cat) => (
@@ -113,8 +166,9 @@ export default function GalleryGrid() {
       <div className="gallery-masonry-grid">
         {filteredImages.map((image, index) => (
           <div 
-            key={image.src} 
+            key={image.src + activeCategory} 
             className="gallery-grid-item"
+            ref={(el) => (itemsRef.current[index] = el)}
             onClick={() => setLightboxIndex(index)}
           >
             <div className="gallery-grid-img-container">

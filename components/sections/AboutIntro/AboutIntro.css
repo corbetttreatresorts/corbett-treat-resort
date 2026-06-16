@@ -21,7 +21,7 @@
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  background-color: #0b0b0b;
+  background-color: var(--color-dark);
 }
 
 .about-intro-video-bg {

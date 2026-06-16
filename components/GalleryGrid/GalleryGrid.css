@@ -221,7 +221,7 @@
 
 .lightbox-img {
   object-fit: contain !important;
-  background-color: #0d0d0d;
+  background-color: var(--color-dark);
   transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform-origin 0.1s ease-out;
 }
 
@@ -229,13 +229,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #cccccc;
+  color: rgba(255, 255, 255, 0.8);
   font-size: 0.95rem;
   padding: 0 0.5rem;
 }
 
 .lightbox-counter {
-  color: #888888;
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.85rem;
 }
 

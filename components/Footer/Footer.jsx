@@ -49,7 +49,7 @@ export default function Footer() {
                     case "twitter":
                       return <RiTwitterXLine />;
                     case "youtube":
-                      return <RiYoutubeLine/>;
+                      return <RiYoutubeLine />;
                     default:
                       return null;
                   }
@@ -114,6 +114,9 @@ export default function Footer() {
           </div>
         </div>
 
+        <div className="footer-bottom-brand">
+          Corbett
+        </div>
         <div className="footer-bottom">
           <p>&copy; {currentYear} Corbett Treat Resort. All Rights Reserved.</p>
           <div className="footer-bottom-links">
