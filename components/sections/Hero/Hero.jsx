@@ -2,7 +2,6 @@ import "./Hero.css";
 import Button from "../../Button";
 import { BOOK_NOW_URL } from "@/constants";
 
-
 export default function Hero() {
   return (
     <header className="hero">
@@ -15,7 +14,6 @@ export default function Hero() {
           poster="/assets/images/hero-poster.png"
           preload="none"
         >
-          
           {/* <source src="/assets/videos/hero-vieo.mp4" type="video/mp4" /> */}
           Your browser does not support the video tag.
         </video>
@@ -43,7 +41,7 @@ export default function Hero() {
             variant="primary"
             className="story-cta-btn"
           >
-            Book Your Stay
+            Book Now
           </Button>
         </div>
       </div>
