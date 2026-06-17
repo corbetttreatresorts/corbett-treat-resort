@@ -1,5 +1,5 @@
 import ClientShell from "@/components/ClientShell";
-import { AboutHero, AboutIntro, AboutMission, AboutDedication, AboutBooking, Footer } from "@/components";
+import { AboutHero, AboutIntro, AboutMission, AboutDedication, Footer } from "@/components";
 
 export const metadata = {
   title: "About Us | Corbett Treat Resort",
@@ -16,7 +16,6 @@ export default function AboutPage() {
         <AboutIntro />
         <AboutMission />
         <AboutDedication />
-        <AboutBooking />
       </main>
 
       <Footer />

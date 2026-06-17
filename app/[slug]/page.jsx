@@ -1,5 +1,11 @@
 import ClientShell from "@/components/ClientShell";
-import { AboutHero, AboutIntro, AboutMission, AboutDedication, AboutBooking, Footer } from "@/components";
+import {
+  AboutHero,
+  AboutIntro,
+  AboutMission,
+  AboutDedication,
+  Footer,
+} from "@/components";
 import { notFound } from "next/navigation";
 
 // Allowed slugs for Option B
@@ -7,14 +13,14 @@ const ALLOWED_SLUGS = ["our-story", "our-mission", "our-team"];
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  
+
   if (!ALLOWED_SLUGS.includes(slug)) {
     return {};
   }
 
   const formattedTitle = slug
     .split("-")
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
   return {
@@ -35,14 +41,15 @@ export default async function CustomSlugPage({ params }) {
     <>
       <ClientShell />
 
-      <main className="about-page-main" style={{ backgroundColor: "#faf8f5", color: "#222222" }}>
+      <main
+        className="about-page-main"
+        style={{ backgroundColor: "#faf8f5", color: "#222222" }}
+      >
         <AboutHero />
 
         {slug === "our-story" && <AboutIntro />}
         {slug === "our-mission" && <AboutMission />}
         {slug === "our-team" && <AboutDedication />}
-
-        <AboutBooking />
       </main>
 
       <Footer />

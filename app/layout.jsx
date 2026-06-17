@@ -50,7 +50,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${poppins.variable} ${playfair.variable}`}>
+    <html 
+      lang="en" 
+      className={`${cormorant.variable} ${poppins.variable} ${playfair.variable}`}
+      data-scroll-behavior="smooth"
+    >
       <body>{children}</body>
     </html>
   );

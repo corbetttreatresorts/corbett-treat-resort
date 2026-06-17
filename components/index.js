@@ -18,7 +18,6 @@ export { default as AboutHero } from "./sections/AboutHero/AboutHero";
 export { default as AboutIntro } from "./sections/AboutIntro/AboutIntro";
 export { default as AboutMission } from "./sections/AboutMission/AboutMission";
 export { default as AboutDedication } from "./sections/AboutDedication/AboutDedication";
-export { default as AboutBooking } from "./sections/AboutBooking/AboutBooking";
 export { default as AccommodationHero } from "./sections/AccommodationHero";
 export { default as RoomGrid } from "./sections/RoomGrid";
 
