@@ -420,13 +420,23 @@
 /* 3. Map Section styling */
 .contact-map-section {
   position: relative;
-  height: 400px;
+  height: 450px;
   width: 100%;
+  border-top: 1px solid var(--color-border);
+  overflow: hidden;
 }
 
 .map-iframe {
   position: absolute;
   inset: 0;
+  filter: grayscale(0.85) contrast(1.1) brightness(0.97) sepia(0.08);
+  opacity: 0.9;
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.map-iframe:hover {
+  filter: grayscale(0) contrast(1) brightness(1) sepia(0);
+  opacity: 1;
 }
 
 .map-overlay-card {
@@ -434,35 +444,42 @@
   left: 1rem;
   top: 1rem;
   z-index: 10;
-  max-width: 280px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 1.25rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  max-width: 300px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 77, 46, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.3s ease;
+}
+
+.map-overlay-card:hover {
+  transform: translateY(-2px);
 }
 
 .card-flex-align {
   display: flex;
   align-items: flex-start;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .card-icon-circle {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  background-color: var(--color-primary);
-  color: var(--color-light);
+  background-color: var(--color-accent-light);
+  color: var(--color-primary);
   flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(197, 168, 128, 0.15);
 }
 
 .card-icon {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 .card-info-text {
@@ -471,15 +488,16 @@
 }
 
 .card-title {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 700;
-  color: var(--color-dark);
+  color: var(--color-primary);
+  letter-spacing: 0.5px;
 }
 
 .card-address {
-  margin-top: 0.25rem;
-  font-size: 0.75rem;
-  line-height: 1.5;
+  margin-top: 0.35rem;
+  font-size: 0.78rem;
+  line-height: 1.55;
   color: var(--color-dark-alt);
 }
 
