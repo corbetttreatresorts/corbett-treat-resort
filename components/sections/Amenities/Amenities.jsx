@@ -8,8 +8,6 @@ import { RiPlantLine, RiMusic2Line } from "react-icons/ri";
 import { FaUmbrellaBeach, FaFire, FaChild } from "react-icons/fa";
 import { AMENITIES } from "@/constants";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const ICON_MAP = {
   umbrella: <FaUmbrellaBeach />,
   fire: <FaFire />,
@@ -21,6 +19,9 @@ const Amenities = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
     const ctx = gsap.context(() => {
       // Header animations
       gsap.fromTo(

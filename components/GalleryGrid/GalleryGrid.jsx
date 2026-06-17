@@ -12,9 +12,6 @@ import { ALL_GALLERY_IMAGES } from "@/constants";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import "./GalleryGrid.css";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const CATEGORIES = [
   { id: "all", label: "ALL" },
@@ -171,9 +168,9 @@ export default function GalleryGrid() {
       
       {mounted ? (
         <ResponsiveMasonry
-          columnsCountBreakPoints={{ 350: 1, 750: 2, 992: 3, 1200: 4 }}
+          columnsCountBreakPoints={{ 350: 2, 750: 3, 992: 3, 1200: 4 }}
         >
-          <Masonry gutter="1.5rem">
+          <Masonry gutter="0rem">
             {filteredImages.map((image, index) => (
               <div 
                 key={image.src + activeCategory} 

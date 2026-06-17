@@ -13,12 +13,13 @@ import {
 import { BsBinoculars } from "react-icons/bs";
 import Button from "../../Button";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const Story = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
     const ctx = gsap.context(() => {
       // Left side: Gallery images fade & slide
       gsap.fromTo(

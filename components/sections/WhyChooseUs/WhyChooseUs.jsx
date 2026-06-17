@@ -6,8 +6,6 @@ import "./WhyChooseUs.css";
 import Image from "next/image";
 import { WHY_CHOOSE_US_STATS } from "@/constants";
 
-gsap.registerPlugin(ScrollTrigger);
-
 const parseStat = (val) => {
   const match = val.match(/^([\d.]+)(.*)$/);
   if (!match) return { num: 0, suffix: val, decimals: 0 };
@@ -21,6 +19,9 @@ export default function WhyChooseUs() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
     const ctx = gsap.context(() => {
       // Top Grid reveal
       gsap.fromTo(

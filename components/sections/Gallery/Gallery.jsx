@@ -8,14 +8,15 @@ import { RiArrowRightLine, RiCameraLensLine } from "react-icons/ri";
 import { GALLERY_IMAGES } from "@/constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 export default function Gallery() {
   const sectionRef = useRef(null);
   const titleRef = useRef(null);
   const itemsRef = useRef([]);
 
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+    }
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
