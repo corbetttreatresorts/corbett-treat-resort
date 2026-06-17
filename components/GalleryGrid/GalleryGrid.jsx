@@ -55,11 +55,7 @@ export default function GalleryGrid() {
           opacity: 1,
           duration: 0.6,
           stagger: 0.05,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: containerRef.current,
-            start: "top 85%",
-          }
+          ease: "power2.out"
         }
       );
       
@@ -73,11 +69,7 @@ export default function GalleryGrid() {
             opacity: 1,
             duration: 0.7,
             stagger: 0.1,
-            ease: "power2.out",
-            scrollTrigger: {
-              trigger: containerRef.current,
-              start: "top 85%",
-            }
+            ease: "power2.out"
           }
         );
       }
